@@ -1,4 +1,4 @@
-FROM centos:latest-alpine
+FROM centos:latest
 COPY index.html /var/www/html
 MAINTAINER setyo 
 RUN yum -y install httpd
