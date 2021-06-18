@@ -1,6 +1,5 @@
-FROM centos:latest
-COPY index.html /var/www/html
+FROM nginx:1.11-alpine
+COPY index.html /usr/share/nginx/html/
 MAINTAINER setyo 
-RUN yum -y install httpd
 EXPOSE 80
-CMD ["/usr/sbin/httpd"," -D", "FOREGROUND"]
+CMD ["ngix", "-g", "daemon off;"]
